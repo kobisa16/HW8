@@ -17,5 +17,11 @@ namespace HW8
         {
             items = new Item[0];
         }
+
+        public void AddItem(Item item)
+        {
+            db.AddItemToDB(item);
+        }
+
     }
 }

@@ -46,7 +46,7 @@ namespace HW8
 
         public int AddItemToDB(Item item)
         {
-            SqlCommand cmd1 = new SqlCommand(" INSERT INTO TBItem (Name) " +
+            SqlCommand cmd1 = new SqlCommand(" INSERT INTO TBItem (Name, Price, Description) " +
                                              " VALUES (@name, @price, @desc)", con);
 
             cmd1.Parameters.AddWithValue("@name", item.Name);

@@ -10,11 +10,11 @@ namespace HW8
             Store s = new Store();
             Console.WriteLine(s);
 
-            s.AddItem(new Item("milkey", "Milky is popular in Israel", 6));
-            s.AddItem(new Item("cottage", "Basic dairy product", 4));
+            s.AddItem(new Item(6, "milkey", 6, "Milky is popular in Israel"));
+            s.AddItem(new Item(5, "cottage", 7, "Basic dairy product"));
             Console.WriteLine(s);
-            s.DeleteKnightFromDb(9);
-            Console.WriteLine(s);
+
 
         }
     }
+}
