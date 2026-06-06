@@ -13,7 +13,8 @@ namespace HW8
             s.AddItem(new Item(6, "milkey", 6, "Milky is popular in Israel"));
             s.AddItem(new Item(5, "cottage", 7, "Basic dairy product"));
             Console.WriteLine(s);
-
+            s.DeleteKnightFromDb(9);
+            Console.WriteLine(s);
 
         }
     }

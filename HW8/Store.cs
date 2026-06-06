@@ -22,6 +22,15 @@ namespace HW8
         {
             db.AddItemToDB(item);
         }
+        public void DeleteKnightFromDb(int Code)
+        {
+            db.DeleteItemFromDB(Code);
+        }
+
+        public override string ToString()
+        {
+            return db.ReadItemsTable();
+        }
 
     }
 }

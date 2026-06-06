@@ -28,7 +28,7 @@ namespace HW8
         public string ReadItemsTable()
         {
             cmd = new SqlCommand(" SELECT *" +
-                                 " FROM Items", con);
+                                 " FROM TBItem", con);
             string result = "";
             con.Open();
             reader = cmd.ExecuteReader();
