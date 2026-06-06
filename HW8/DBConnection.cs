@@ -47,9 +47,11 @@ namespace HW8
         public int AddItemToDB(Item item)
         {
             SqlCommand cmd1 = new SqlCommand(" INSERT INTO TBItem (Name) " +
-                                             " VALUES ('@name')", con);
+                                             " VALUES (@name, @price, @desc)", con);
 
             cmd1.Parameters.AddWithValue("@name", item.Name);
+            cmd1.Parameters.AddWithValue("@price", item.Price);
+            cmd1.Parameters.AddWithValue("@desc", item.Description);
             con.Open();
             int res = cmd1.ExecuteNonQuery();
             con.Close();
@@ -70,8 +72,8 @@ namespace HW8
         public int DeleteItemFromDB(int code)
         {
             SqlCommand cmd3 = new SqlCommand(" DELETE FROM TBItem " +
-                                             " WHERE Code = 1", con);
-
+                                             " WHERE Code = @code", con);
+            cmd3.Parameters.AddWithValue("@code", code);
             int delRes = 0;
             con.Open();
             delRes = cmd3.ExecuteNonQuery();
